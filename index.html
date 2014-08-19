@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="js/jquery.js"></script>
+	<script>
+
+	$(document).ready(function() {
+		var images = ["ocean1.jpg","ocean2.jpg","ocean3.jpg"];
+
+		$("header").attr("style", "background:url(img/ocean1.jpg)");
+
+		var count = 0;
+
+		function changeBackground() {
+			count++;
+			if (count > 2) {
+				count = 0;
+				$("header").attr("style", "background:url(img/ocean1.jpg)");
+			} else {
+				$("header").attr("style", "background:url(img/" + images[count] + ")");
+			}
+		}
+
+		setInterval(function() {
+			changeBackground();
+		}, 3000);
+	});
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="sow-bus">
+			<img src="img/bus.jpg" />
+			<div><a>Click here to donate</a></div>	
+		</div>
+		<div class="thank-you">
+			<img src="img/thankyou.jpg" />
+			<div>You're awesome!</div>
+		</div>
+		<header>
+	    	<img class="profile-pic" src="http://i.imgur.com/vJKHOY3.jpg?1">
+	    	<h1>Melody Serra</h1>
+	    	<div class="navbar">
+		    	<ul>
+		      		<li><a href="#">About Me</a></li>
+		      		<li><a href="#">Experiences</a></li>
+		      		<li><a href="#">Contact Information</a></li>
+		    	</ul>
+	    	</div>
+	  	</header>
+	  	 <article>
+	    <h2>About Me</h2>
+	    <p>My dream is to one day teach underprivilged children and adolescents how to code. I believe there is something truly magical about coming alongside young people and watching them apply their creativity and unique perspective while learning. I would love nothing more than to empower young people by teaching them how to bring their ideas to life through web development.</p>
+	  </article>
+	  <article>
+	    <h2>My Experiences</h2>
+	    <p>As a senior in college I learned that in some inner-city schools in California, 40-50% of students are not graduating. This was a shocking realization that I felt compelled to act upon. I therefore decided to teach in East Los Angeles. Most of the schools I taught at were under-resourced and under-staffed. I also began to volunteer with homeless and runaway youth, tutoring them weekly. I volunteered for School on Wheels for five years. This organization offers free tutoring and mentoring to homeless children. (If you could like to donate to this amazing organzation, click on the logo on the top right of the page). Through these experiences, I quickly realized that our education system is in need of change. I also realized the power of technology and how you can reach an entire community of parents, students, and/or staff with a website or application. I would love to learn the skills to bring ideas to life through technology and then teach children these same skills. </p>
+	  </article>
+	  <article>
+	    <h2>My Contact Information</h2>
+	    <p>Feel free to email me at melodyserra@gmail.com and/or call me at (626) 375-9372.</p>
+	    <input type="email" placeholder="Your email">
+	  	<input type="submit">
+	  </article>
+	</div>
+</body>
